@@ -1,0 +1,53 @@
+{
+    "name": "blog-example",
+    "version": "0.0.0",
+    "description": "Um simples blog",
+    "main": "src/index.ts",
+    "type": "module",
+    "scripts": {
+        "start": "node .build/index.js",
+        "dev": "nodemon -w ./ -e .ts,.json -x 'npm run build && node --inspect .build/index.js'",
+        "build": "node esbuild.config.mjs",
+        "lint": "eslint src",
+        "tsc-check": "tsc",
+        "test": "vitest --ui",
+        "test-debug": "vitest --ui --no-file-parallelism --inspectBrk=127.0.0.1:9119"
+    },
+    "keywords": [],
+    "author": "jlucasbx",
+    "license": "MIT",
+    "dependencies": {
+        "@types/morgan": "^1.9.9",
+        "argon2": "^0.40.3",
+        "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.5.1",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.5-lts.1",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.6.0",
+        "@types/argon2": "^0.14.1",
+        "@types/axios": "^0.9.36",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/jsonwebtoken": "^9.0.6",
+        "@types/mongoose": "^5.11.97",
+        "@types/multer": "^1.4.11",
+        "@types/node": "^20.14.9",
+        "@types/supertest": "^6.0.2",
+        "@vitest/ui": "^2.0.5",
+        "axios": "^1.7.7",
+        "dotenv": "^16.4.5",
+        "esbuild": "^0.23.0",
+        "eslint": "^8.57.0",
+        "globals": "^15.8.0",
+        "nodemon": "^3.1.4",
+        "supertest": "^7.0.0",
+        "typescript-eslint": "^7.15.0",
+        "vite-tsconfig-paths": "^4.3.2",
+        "vitest": "^2.0.4"
+    }
+}
